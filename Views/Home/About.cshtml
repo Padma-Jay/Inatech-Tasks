@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "";
+}
+
+<html>
+<head>
+
+    <h1>@ViewData["Title"]</h1>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Exo+2:ital@1&family=Fira+Sans:ital,wght@1,500&family=Heebo:wght@500&family=Tilt+Warp&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <style>
+        .abt {
+            text-align: center;
+            color: #FDD36A
+        }
+
+        #imgg {
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+            width: 100%;
+        }
+        /* .atxt{
+                text-align: right;
+            }*/
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .text {
+            font-size: 20px;
+            padding-left: 20px;
+            font-family: 'Exo 2';
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 class="abt">ABOUT US</h1>
+    @*<div>
+    <img id="imgg" src="~/images/about-us.jpg" />
+    <p class="atxt">Wing Truck provides the fastest and cheapest services</p>
+    </div>*@
+    <div class="container">
+        <div class="image">
+            <img id="imgg" src="~/images/about-us.jpg">
+        </div>
+        <div class="text">
+            <p>We specialize in offering time definite solutions. We are the only express cargo company in India having our own set up across India reinforced with a team of over 3500+ professionals and more than 40000 pickup and delivery locations.</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

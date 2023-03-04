@@ -1,0 +1,64 @@
+﻿@model WingTruck.Models.Customer
+
+@{
+    ViewData["Title"] = "Accept";
+}
+
+<h1>ORDER ACCEPT</h1>
+
+<h4>Customer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CustomerId" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FromAddr" class="control-label"></label>
+                <input asp-for="FromAddr" class="form-control" />
+                <span asp-validation-for="FromAddr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToAddr" class="control-label"></label>
+                <input asp-for="ToAddr" class="form-control" />
+                <span asp-validation-for="ToAddr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight" class="control-label"></label>
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderTypeId" class="control-label"></label>
+                <select asp-for="OrderTypeId" class="form-control" asp-items="ViewBag.OrderTypeId"></select>
+                <span asp-validation-for="OrderTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" onclick="confirm('Order Accepted!')" value="Accept" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to Requests</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

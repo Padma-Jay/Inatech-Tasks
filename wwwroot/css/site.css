@@ -1,0 +1,66 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    /*    background-color: beige;
+*/ /*background-image:url("~/images/order-bg.jpg");
+      background-size: auto;
+      background-repeat:no-repeat;*/
+}
+
+#title {
+    font-family: 'Tilt Warp', cursive;
+    color: black;
+}
+
+.bd-img {
+    background-image: url('../images/o2.png');
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar-custom {
+    background-color: #FDD36A;
+}
+
+.navbar a:hover {
+    background-color: #ffe7aa;
+}
+
+.navbar a.active {
+    background-color: #FDD36A;
+}
+
+/*#login {
+    margin-left: 600px;
+}*/
+#register{
+    margin-left: 640px;
+}
+#manage{
+    margin-left: 500px
+}
+
+.control-label{
+    font-family: 'Ubuntu'
+}
+.cuscreate-txt {
+    font-family: 'Tilt Warp', cursive;
+    color: #caa342
+}

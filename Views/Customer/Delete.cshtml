@@ -1,0 +1,63 @@
+﻿@model WingTruck.Models.Customer
+
+@{
+    ViewData["Title"] = "Decline";
+}
+
+<h1 class="cuscreate-txt">ORDER DECLINE</h1>
+
+<h3>Are you sure you want to decline this?</h3>
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FromAddr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FromAddr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ToAddr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ToAddr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Order)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Order.OrderTypeId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CustomerId" />
+        <input type="submit" onclick="confirm('Decline this Order')" value="Decline" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to Requests  </a>
+    </form>
+</div>

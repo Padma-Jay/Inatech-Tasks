@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WingTruck.Models.Executive>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="cuscreate-txt">SERVICES</h1>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ExecutiveName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhnNo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExecutiveName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order.OrderType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhnNo)
+            </td>
+            @*<td>
+                <a asp-action="Edit" asp-route-id="@item.ExecutiveId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ExecutiveId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ExecutiveId">Delete</a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
